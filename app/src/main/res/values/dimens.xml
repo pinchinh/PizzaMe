@@ -1,0 +1,17 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="list_item_padding">12dp</dimen>
+    <dimen name="list_item_margin_left_right">16dp</dimen>
+    <dimen name="list_item_margin_top_bottom">6dp</dimen>
+    <dimen name="list_item_text_size_title">20sp</dimen>
+    <dimen name="list_item_text_size_address">16sp</dimen>
+    <dimen name="list_item_text_size_phone">16sp</dimen>
+    <dimen name="list_item_text_size_distance">16sp</dimen>
+    <dimen name="list_screen_error_padding">16dp</dimen>
+    <dimen name="details_screen_padding">16dp</dimen>
+    <dimen name="details_item_padding">6dp</dimen>
+    <dimen name="details_icon_size">30dp</dimen>
+    <dimen name="error_text_size">24sp</dimen>
+    <dimen name="detail_text_size_title">24sp</dimen>
+    <dimen name="detail_text_size_item">16sp</dimen>
+</resources>

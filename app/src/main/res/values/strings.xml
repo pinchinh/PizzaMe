@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PizzaMe</string>
+    <string name="action_settings">Settings</string>
+    <string name="distance_unit">miles</string>
+    <string name="error_unable_to_obtain_location">Unable to obtain device location!</string>
+    <string name="error_pizzame_needs_location_access">PizzaMe needs access to your location to show you local pizza stores.</string>
+
+</resources>
