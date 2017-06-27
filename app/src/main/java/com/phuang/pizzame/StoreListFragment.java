@@ -124,6 +124,10 @@ public class StoreListFragment extends Fragment implements StoreListContract.Vie
 
     @Override
     public void showProgress() {
+        if (!isAttached()) {
+            return;
+        }
+
         mProgressBar.setVisibility(View.VISIBLE);
         mRecyclerView.setVisibility(View.GONE);
         mErrorText.setVisibility(View.GONE);
@@ -131,6 +135,10 @@ public class StoreListFragment extends Fragment implements StoreListContract.Vie
 
     @Override
     public void showError(String error) {
+        if (!isAttached()) {
+            return;
+        }
+
         mErrorText.setVisibility(View.VISIBLE);
         mErrorText.setText(error);
         mProgressBar.setVisibility(View.GONE);
@@ -139,6 +147,10 @@ public class StoreListFragment extends Fragment implements StoreListContract.Vie
 
     @Override
     public void showItems(List<Store> stores) {
+        if (!isAttached()) {
+            return;
+        }
+
         mReceivedData = true;
         mRecyclerView.setVisibility(View.VISIBLE);
         mProgressBar.setVisibility(View.GONE);
@@ -149,6 +161,10 @@ public class StoreListFragment extends Fragment implements StoreListContract.Vie
         } else {
             ((StoreListAdapter)adapter).setItems(stores);
         }
+    }
+
+    private boolean isAttached() {
+        return getActivity() != null && isAdded();
     }
 
     @Override
