@@ -28,7 +28,7 @@ import com.phuang.pizzame.mvp.LocationUtilPresenter;
 import java.util.List;
 
 public class StoreListFragment extends Fragment implements StoreListContract.View,
-        LocationUtilPresenter.LocationListener {
+        LocationUtilPresenter.LocationUtilListener {
 
     public static final int PERMISSION_REQUEST_CODE_FINE_LOCATION = 100;
 
@@ -85,7 +85,7 @@ public class StoreListFragment extends Fragment implements StoreListContract.Vie
                     new String[]{ Manifest.permission.ACCESS_FINE_LOCATION },
                     PERMISSION_REQUEST_CODE_FINE_LOCATION);
         } else {
-            new LocationUtilPresenter().getZipCode(getContext(), this, this);
+            new LocationUtilPresenter().getZipCode(PizzaMe.get(), this, this);
         }
     }
 
@@ -162,7 +162,7 @@ public class StoreListFragment extends Fragment implements StoreListContract.Vie
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // permission was granted, yay!
                     // Now try to get device location
-                    new LocationUtilPresenter().getZipCode(getContext(), this, this);
+                    new LocationUtilPresenter().getZipCode(PizzaMe.get(), this, this);
 
                 } else {
                     // permission denied, boo!
